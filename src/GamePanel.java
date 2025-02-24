@@ -69,6 +69,7 @@ public class GamePanel extends JPanel implements Runnable{
         gameThread.start();
     }
     public void setPiecesLists(){
+        piecesOnBoard.removeAll(startingPieces);
         for(int i = 0; i < 8; i++){
             startingPieces.add(new Pawn(1,i,0));
             startingPieces.add(new Pawn(6,i,1));

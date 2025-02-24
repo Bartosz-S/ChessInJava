@@ -22,7 +22,7 @@ public class King extends Piece{
     @Override
     public boolean canTake(Piece piece){
         if (piece.color != GamePanel.playersColor && piece.col == col
-                && piece.row == row) {
+                && piece.row == row && Math.abs(col - preCol) <= 1 && Math.abs(row - preRow) <= 1) {
             return true;
         }
         return false;
